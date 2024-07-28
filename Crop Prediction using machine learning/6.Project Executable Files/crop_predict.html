@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommando - Results</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #27ae60;
+        }
+
+        .header nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .header nav a:hover {
+            color: #27ae60;
+        }
+
+        .result-container {
+            padding: 40px;
+            text-align: center;
+            background: url('/static/images/result-background.jpg') no-repeat center center/cover;
+            /* Replace 'path_to_your_background_image.jpg' with the actual path to your image */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-container h2 {
+            color: #27ae60;
+            margin-bottom: 20px;
+        }
+
+        .result-container p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .result-container .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #e74c3c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .result-container .btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Crop Recommando</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/details">Predict</a>
+            <a href="/crop_predict">Results</a>
+        </nav>
+    </header>
+    <section class="result-container">
+        <h2>Prediction Result</h2>
+        {% if crop %}
+            <p>The recommended crop for cultivation is: {{ crop }}</p>
+        {% else %}
+            <p>No prediction available.</p>
+        {% endif %}
+        <a href="/details" class="btn">Predict Again</a>
+    </section>
+</body>
+</html>

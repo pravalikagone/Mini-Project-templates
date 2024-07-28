@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommando</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #27ae60;
+        }
+
+        .header nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .header nav a:hover {
+            color: #27ae60;
+        }
+
+        .hero {
+            position: relative;
+            height: 400px;
+            text-align: center;
+            color: #fff;
+            background: url('/static/images/hero-image.jpg') no-repeat center center/cover;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+            z-index: 1;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin: 0;
+            z-index: 2;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            z-index: 2;
+        }
+
+        .hero .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #e74c3c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            z-index: 2;
+        }
+
+        .hero .btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Crop Recommando</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/details">Details</a>
+            <a href="/crop_predict">Results</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h2>We Offer You Digital Bharat with Crop Recommando</h2>
+        <p>We are a team of talented predictors making the agricultural industry more profitable.</p>
+        <a href="/details" class="btn">Get Started</a>
+    </section>
+</body>
+</html>
